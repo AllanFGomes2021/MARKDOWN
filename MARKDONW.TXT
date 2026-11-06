@@ -1,0 +1,199 @@
+MARKDOWN
+===================================================
+https://daringfireball.net/projects/markdown/
+https://daringfireball.net/projects/markdown/dingus
+https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+CABEÇALHOS
+===========================
+
+ao lado do título
+
+#      TÍTULO 1
+##     TÍTULO 2
+###    TÍTULO 3
+####   TÍTULO 4
+#####  TÍTULO 5
+###### TÍTULO 6
+
+abaixo do título
+
+TÍTULO 1
+= ou ==== (um ou mais iguais)
+TÍTULO 2  (um ou mais hifens)
+- ou ----
+
+por estética (Markdown ignorar as tralhas do final)
+
+# TÍTULO 1 #
+## TÍTULO 2 ##
+
+PARAGRAFOS
+===========================
+
+no Markdown não existe um indicador para paragrafo e só deixar sem marcado
+que o Markdown reconhece como paragrafo.
+
+OBSERVAÇÃO: para quebra linha no Markdown é necessário colocar dois espaços no final
+do paragrafo. (sem necessidade de inserir um linha entre os textos).
+
+EXEMPLO:
+
+colocando dois espaços no final do paragrafo.
+
+lorem at dsadsds ..
+teste de quebra de linha
+
+colocando uma linha vazias entre os textos
+
+lorem at dsadsds
+...
+teste de quebra de linha
+
+ÊNFASE
+===========================
+negrito --> **palavra**
+negrito --> __palavra__
+itálico --> *palavra*
+itálico --> _palavra_
+negrito e itálico --> ***palavra***
+negrito e itálico --> **_palavra_**
+negrito e itálico --> __*palavra*__
+riscado --> ~~palavra~~
+citação --> >texto de citação (sinal de maior no início do texto)
+citação com negrito e itálico --> > citação com texto em **NEGRITO** e _ITÁLICO_
+ 
+LINHAS HORIZONTAIS
+===================================
+Abaixo do texto colocar *** ou --- ou * * * ou - - - ou ___ ou _ _ _
+Por estética, podemos colocar após terceiro - ou * vários que serão todos ignorados  
+---------------------------------------
+***************************************
+_______________________________________
+
+
+LISTAS NÃO ORDENADAS
+===================================
+
+EXEMPLOS DE UM NÍVEL:
+- item 1 ou + item 1 ou * item 1 ou * item 1
+- item 2 ou + item 2 ou * item 2 ou + item 2
+- item 3 ou + item 3 ou * item 3 ou - item 3
+
+EXEMPLOS COM OUTROS NÍVEIS: (tem que utilizar a tecla "tab" ou adicionar dois espaço na frente do item)
+* ITEM 01
+    - SUBITEM 01 OU * OU +
+    - SUBITEM 02 OU * OU +
+    - SUBITEM 03 OU * OU +
+        - SUBITEM 01 OU * OU +
+        - SUBITEM 02 OU * OU +
+        - SUBITEM 03 OU * OU +
+* ITEM 02
+
+
+LISTAS ORDENADAS
+===================================
+
+1. item 1
+2. item 2
+3. item 3
+
+ele vai ignorar o número repetido da frente e vai renumerar a lista
+1. item 1
+1. item 2
+1. item 3
+
+ele vai ignorar o número da frente e vai renumerar a lista a partir do número 8
+8. item 1
+5. item 2
+3. item 3
+
+exemplo para ignorar a lista é preciso colocar o caracter de escape e
+        colocar 2 espaços no final para quebra linha
+1994/. Brasil
+1998/. Uruguai
+2012/. França
+
+EXEMPLOS COM OUTROS NÍVEIS: (tem que utilizar a tecla "tab" ou adicionar dois espaço na frente do item)
+1. x
+2. x
+    1. d
+    2. d
+    3. d
+3. x
+
+
+LINKS
+===================================
+
+EXEMPLO 1:
+[CLIQUE AQUI](https://show.com.br)
+
+EXEMPLO 2 (com texto alternativo - HINT):
+[CLIQUE AQUI](https://show.com.br "Blog")
+
+EXEMPLO 3
+[Clique aqui][site-url]
+
+[site-url]:https://show.com.br
+
+IMAGENS
+===================================
+
+EXEMPLO 1:
+![MarkDown](imagens/foto.png)
+
+EXEMPLO 2:
+[Foto][imagem]
+[imagem]:imagens/foto.png
+
+EXEMPLO 3 (imagem com link):
+[![MarkDown](imagens/foto.png)](https://show.com.br)
+
+EXEMPLO 3 (imagem com link utilizando variáveis):
+
+[![MarkDown]: [image-thumbs] ](https://show.com.br)
+
+[image-thumbs]: imagens/foto.png
+[image-url]: https://show.com.br
+
+
+TABELA
+===================================
+
+Exemplo 1:
+| NOME    | IDADE |
+| ------- | ----- |
+| Roberto |    36 |
+
+Exemplo 2: (Não é necessário alinhamento)
+| NOME | IDADE |
+| ------- | ----- |
+| Roberto | 36 |
+
+Exemplo 3:
+Alinhamento deve ser utilizar os dois pontos junto a palavra que se deseja alinhar
+Esquerda:  :All
+Direita:   All:
+Ao Centro  :All:
+
+
+BLOCO DE CÓDIGO
+===================================
+
+Exemplo em Linha
+Informe os parâmetros `username`
+e `password` para a função `login()`.
+
+EVITANDO CASO O TEXTO TEM CRASE - Coloca duas crases no inicio e no final
+``const message = `My name is ${name}`;``
+
+Exemplo em bloco (pode colocar 4 espaço na frente do texto ou colocando ``` no inicio e no fim)
+```
+// Login.js
+
+Const username = 'x';
+const password = 'x';
+
+login(username, password);
+```
